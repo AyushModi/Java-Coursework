@@ -77,9 +77,9 @@ public class MySetFactory
                         ("Attempting to use BagFactory to create something that is not a Bag");
         }
     }
-    public MySet<? extends Comparable> readSet(String filePath) throws IOException, ClassNotFoundException {
-        SetReader sr = new SetReader();
-        return sr.readFromFile(filePath);
-    }
+//    public MySet<? extends Comparable> readSet(String filePath) throws IOException, ClassNotFoundException {
+//        SetReader sr = new SetReader();
+//        return sr.readFromFile(filePath);
+//    }
 }
 

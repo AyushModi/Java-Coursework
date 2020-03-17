@@ -1,10 +1,9 @@
 package uk.ac.ucl;
 
-import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Iterator;
 
-public class MapMySet<T extends Comparable<T>> extends AbstractMySet<T> implements Serializable
+public class MapMySet<T extends Comparable<T>> extends AbstractMySet<T>
 {
     private HashMap<T,T> contents;
     private int maximumSize;

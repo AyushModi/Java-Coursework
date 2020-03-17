@@ -4,7 +4,6 @@ import java.io.*;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * This class implements methods common to all concrete set implementations but does not
@@ -26,7 +25,11 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
         return "{" +  this.toList().stream().map(stringFunction).collect(Collectors.joining(", ")) + "}";
     }
     private String cleanString(String str) {
-        return "\"" + str.replace("\\","\\\\").replace("\"","\\\"") + "\"";
+        return ("\"" + str.replace("\\","\\\\")
+                          .replace("\"","\\\"")
+                          .replace("{","\\{")
+                          .replace("}","\\}")
+                     + "\"");
     }
     @Override
     public boolean equals(MySet<T> aSet)
@@ -48,6 +51,8 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
     public List<T> toList()
     {
         ArrayList<T> returnList = new ArrayList<>();
+//        returnList.add((MySet<T>) this);
+//        returnList.add();
         this.iterator().forEachRemaining(returnList::add);
         // TODO write the code to return a List of list of the set contents.
         return returnList;

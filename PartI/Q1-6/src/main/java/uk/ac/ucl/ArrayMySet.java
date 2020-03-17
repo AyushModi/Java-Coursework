@@ -1,6 +1,5 @@
 package uk.ac.ucl;
 
-import java.io.Serializable;
 import java.util.Iterator;
 import java.util.ArrayList;
 
@@ -10,7 +9,7 @@ import java.util.ArrayList;
  *  Objects representing values stored in a set are compared using the compareTo method, so
  *  the object classes must correctly implement compareTo.
  */
-public class ArrayMySet<T extends Comparable<T>> extends AbstractMySet<T> implements Serializable
+public class ArrayMySet<T extends Comparable<T>> extends AbstractMySet<T>
 {
   private ArrayList<T> contents;
   private int maximumSize;

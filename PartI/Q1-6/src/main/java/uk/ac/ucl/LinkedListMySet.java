@@ -3,7 +3,7 @@ package uk.ac.ucl;
 import java.io.Serializable;
 import java.util.Iterator;
 
-public class LinkedListMySet<T extends Comparable<T>> extends AbstractMySet<T> implements Serializable
+public class LinkedListMySet<T extends Comparable<T>> extends AbstractMySet<T>
 {
     private int maximumSize;
     private ListElement<T> head;

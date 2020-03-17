@@ -1,0 +1,18 @@
+
+<html>
+<head>
+  <title>Patient Data App</title>
+</head>
+<body>
+<div class="main">
+  <h1>Search</h1>
+  <p>Put ε for empty string. Blank to ignore column in search.</p>
+  <form method="POST" action="/runsearch.html">
+    <input type="text" name="searchString" placeholder="Enter search keyword here"/>
+    <input type="submit" value="Search"/>
+    <input type="checkbox" name="matchWhole" id="matchWhole">
+    <label for="matchWhole">Match whole string</label>
+  </form>
+</div>
+</body>
+</html>

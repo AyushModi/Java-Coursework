@@ -47,6 +47,7 @@ public class Main
       set1.add(1);
       set1.add(2);
       set1.add(3);
+      set1.powerSet().toString();
       set2 = factory.getMySet();
       set2.add(2);
       set2.add(3);

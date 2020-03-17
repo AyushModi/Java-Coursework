@@ -1,11 +1,14 @@
 package uk.ac.ucl;
 
 import java.io.*;
+import java.util.Optional;
 
-public class SetWriter<T extends Comparable<T>> {
+public class SetWriter {
     String filePath;
-    MySet<T> set;
-    public SetWriter(String filePath, MySet<T> set) {
+    MySet<?> set;
+    private int depth = 1;
+
+    public <T extends Comparable<T>> SetWriter(String filePath, MySet<T> set) {
         this.filePath = filePath;
         this.set = set;
     }
@@ -14,37 +17,39 @@ public class SetWriter<T extends Comparable<T>> {
         this.filePath = filePath;
     }
 
-    public void setMySet(MySet<T> set) {
+    public <T extends Comparable<T>> void setMySet(MySet<T> set) {
         this.set = set;
     }
 
-//    public void writeToFile(String filePath) throws IOException {
-////        FileWriter out = new FileWriter("./" + filePath);
-////        out.write(set.iterator().next().getClass().toString());
-////        out.write(set.toString());
-////        out.close();
-//        FileOutputStream fos = new FileOutputStream(filePath);
-//        ObjectOutputStream oos = new ObjectOutputStream(fos);
-//        oos.writeObject(set);
-//        oos.close();
-//    }
-
-
-    public static void main(String[] args) {
-        //TODO change var names
-        MySetFactory factory = MySetFactory.getInstance();
-        factory.setClassName("MapMySet");
-        try {
-            MySet<String> set = factory.getMySet();
-            set.add("String1");
-            set.add("String2");
-            set.add("wait");
-            set.writeToFile("Sets/sets.txt");
-        } catch (MySetException e) {
-            System.out.println("set error caught");
-        } catch (IOException e) {
-            System.out.println("io error caught");
-            System.out.println(e.toString());
+    public void writeToFile() throws IOException, MySetException {
+        Optional<String> className = getSetClass(set,1);
+        if (className.isPresent())
+            writeToFile(className.get());
+        else {
+            throw new MySetException("Cannot write an empty set");
         }
+    }
+
+    private void writeToFile(String className) throws IOException {
+        BufferedWriter writer = new BufferedWriter(new FileWriter(filePath));
+        writer.write(className);
+        writer.write(depth);
+        writer.write(Integer.toString(depth));
+        writer.write(set.toString());
+        writer.close();
+    }
+
+    private Optional<String> getSetClass(MySet set, int depth) {
+        for (var item : set) {
+            if (item == null) continue;
+            if (item instanceof MySet) {
+                Optional<String> temp = getSetClass((MySet) item, depth+1);
+                if (!temp.isEmpty()) return temp;
+            } else {
+                this.depth = depth;
+                return Optional.of(item.getClass().getName());
+            }
+        }
+        return Optional.empty();
     }
 }
