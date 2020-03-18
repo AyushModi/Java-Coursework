@@ -77,7 +77,7 @@ public class Main
       set1.add("One, \"Fake\\\" Two");
       set1.add("Two\", Fake Three");
       set1.add("Three");
-      set1.powerSet().powerSet().writeToFile("Sets/set4.txt");
+      set1.powerSet().powerSet().writeToFile("Sets/set5.txt");
 
       set2 = factory.getMySet();
       set2.add("Two");
@@ -126,14 +126,14 @@ public class Main
     factory.setClassName("LinkedListMySet");
 //    factory.setClassName("MapMySet");
 //    checkIntSets();
-  try {
-    MySet<Integer> setKaboom = factory.readSet("Sets/set4.txt", Integer.class);
+//    checkStringSets();
+    try {
+    MySet<String> setKaboom = factory.readSet("Sets/set5.txt", String.class);
     System.out.println("hi");
   } catch (Exception e) {
     System.out.println(e.toString());
   }
 //    System.out.println("\n\n");
-//    checkStringSets();
 //    writeComplicatedSets();
   }
 
