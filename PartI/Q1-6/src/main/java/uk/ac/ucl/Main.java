@@ -47,7 +47,7 @@ public class Main
       set1.add(1);
       set1.add(2);
       set1.add(3);
-      set1.powerSet().toString();
+      set1.powerSet().powerSet().writeToFile("Sets/set4.txt");
       set2 = factory.getMySet();
       set2.add(2);
       set2.add(3);
@@ -62,6 +62,8 @@ public class Main
     {
       System.out.println("====> MySet Exception thrown...");
       System.out.println(e.toString());
+    } catch (IOException e) {
+      System.out.println("====> IO Exception thrown...");
     }
   }
 
@@ -75,6 +77,8 @@ public class Main
       set1.add("One, \"Fake\\\" Two");
       set1.add("Two\", Fake Three");
       set1.add("Three");
+      set1.powerSet().powerSet().writeToFile("Sets/set4.txt");
+
       set2 = factory.getMySet();
       set2.add("Two");
       set2.add("Three");
@@ -88,6 +92,8 @@ public class Main
     catch (MySetException e)
     {
       System.out.println("====> MySet Exception thrown...");
+    } catch (IOException e) {
+      System.out.println("====> IO Exception thrown...");
     }
   }
   public void writeComplicatedSets() {
@@ -119,11 +125,16 @@ public class Main
 //    factory.setClassName("ArrayMySet");
     factory.setClassName("LinkedListMySet");
 //    factory.setClassName("MapMySet");
-
-    checkIntSets();
-    System.out.println("\n\n");
-    checkStringSets();
-    writeComplicatedSets();
+//    checkIntSets();
+  try {
+    MySet<Integer> setKaboom = factory.readSet("Sets/set4.txt", Integer.class);
+    System.out.println("hi");
+  } catch (Exception e) {
+    System.out.println(e.toString());
+  }
+//    System.out.println("\n\n");
+//    checkStringSets();
+//    writeComplicatedSets();
   }
 
   public static void main(String[] args)

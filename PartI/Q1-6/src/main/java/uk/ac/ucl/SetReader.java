@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.function.Function;
 
 public class SetReader<T extends Comparable<T>> {
     private MySetFactory factory = MySetFactory.getInstance();
@@ -15,18 +17,22 @@ public class SetReader<T extends Comparable<T>> {
     public SetReader(Class clazz) {
         this.clazz = clazz;
     }
+
     public MySet<T> readFromFile(String filePath) throws IOException, ClassNotFoundException, MySetException {
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String className = br.readLine();
-            Class setClass = Class.forName(className);
             int depth = Integer.parseInt(br.readLine());
-            if (!setClass.equals(clazz))
-                throw new MySetException("Set in file has type: " + setClass.getName());
+            String setText = br.readLine();
+
+            Class setClass = Class.forName(className);
             if (!Comparable.class.isAssignableFrom(setClass))
                 throw new ClassNotFoundException("Class not comparable");
-
-            String setText = br.readLine();
+            if (!setClass.equals(clazz))
+                System.out.println("Set in file has type: " + setClass.getName() +
+                        "\nAttempting to read anyway. May produce errors");
+            if (setText.charAt(0) != '{' && setText.charAt(setText.length()-1) != '}')
+                throw new MySetException("Invalid set");
             return getSet(setText, depth);
         } catch (NumberFormatException e) {
             throw new MySetException("Invalid set read");
@@ -37,77 +43,95 @@ public class SetReader<T extends Comparable<T>> {
         if (clazz.isAssignableFrom(String.class)) {
             return setText;
         } else if (clazz.isAssignableFrom(Integer.class)) {
-            return Integer.valueOf(setText);
+            return Integer.valueOf(setText.trim());
         } else if (clazz.isAssignableFrom(Boolean.class)) {
-            return Boolean.valueOf(setText);
+            return Boolean.valueOf(setText.trim());
         } else if (clazz.isAssignableFrom(Double.class)) {
-            return Double.valueOf(setText);
+            return Double.valueOf(setText.trim());
+        } else if (clazz.isAssignableFrom(Boolean.class)) {
+            return Boolean.valueOf(setText.trim());
+        } else if (clazz.isAssignableFrom(Character.class)) {
+            return setText.charAt(0);
         } else {
             throw new IllegalArgumentException("Bad type.");
         }
     }
 
+    @SuppressWarnings("unchecked")
     private MySet<T> getSet(String setText, int depth) throws MySetException {
-
         MySet<T> setCreated = factory.getMySet();
-        if (setText.charAt(0) != '{')
+        if (setText.charAt(0) != '{' && setText.charAt(setText.length()-1) != '}')
             throw new MySetException("Invalid set");
-        if (depth == 1) {
-            setText = setText.substring(1);
-            StringBuilder subText = new StringBuilder();
-            char temp;
-            int i = 0;
-            while (i < setText.length()) {
-                if ((temp=setText.charAt(i)) != ',' && temp != '}') {
-                    subText.append(temp);
-                    i++;
-                    if (temp == '\\') {
-                        subText.append(subText.charAt(i));
-                        i++;
+        StringBuilder subsetText = new StringBuilder();
+        char temp, nextTemp ='_';
+        int i = 1;
+        int curly = 1;
+        boolean subsetEnded = false;
+//        Function<Character, Function<Character,Boolean>> condition = (depth == 1)
+//                ? c -> (n -> (c != ',' && c != '}'))
+//                : c -> (n -> !(c == '}' && (n == ',' || n == '}')));
+
+        Function<Integer, Function<Boolean, Boolean>> condition = (depth == 1)
+                ? j -> b -> (setText.charAt(j) != ',' && setText.charAt(j) != '}')
+                : j -> b -> !b;
+        while (i < setText.length()) {
+            temp = setText.charAt(i);
+//            if (condition.apply(i) && curly != 0) {
+            if (condition.apply(i).apply(subsetEnded)) {
+                if (depth != 1 || temp != '{') {
+                    subsetText.append(temp);
+                    if (temp == '{') curly++;
+                    else if (temp == '}') {
+                        curly--;
+                        if (curly == 1)
+                            subsetEnded = true;
                     }
-                } else {
-                    if (subText.length() != 0) {
-                        setCreated.add((T) parseToParam(subText.toString()));
-                    }
-                    subText = new StringBuilder();
+                }
+                i++;
+                if (temp == '\\') {
+                    subsetText.append(setText.charAt(i));
                     i++;
                 }
-            }
-        } else {
-            setText = setText.substring(1);
-            StringBuilder subText = new StringBuilder();
-            char temp;
-            int i = 0;
-
-            while (i < setText.length()) {
-                if (!((temp=setText.charAt(i)) == '}' && (setText.charAt(i+1) == ',' || setText.charAt(i+1) == '}'))) {
-                    subText.append(temp);
-                    i++;
-                    if (temp == '\\') {
-                        subText.append(temp);
+            } else {
+                if (subsetText.length() != 0) {
+                    if (depth == 1) {
+                        setCreated.add((T) parseToParam(subsetText.toString()));
                         i++;
+                    } else {
+//                        char[] chars = new char[curly];
+                        curly=1;
+//                        Arrays.fill(chars, '}');
+//                        subsetText.append('}');
+                        setCreated.add((T) getSet(subsetText.toString(), depth - 1));
+                        while (++i < setText.length() && setText.charAt(i) != '{');
+
                     }
                 } else {
-                    if (subText.length() != 0) {
-                        setCreated.add((T) getSet(subText.toString() + "}", depth - 1));
+                    if (depth > 1) {
+                        setCreated.add((T) factory.getMySet());
+                        while (++i < setText.length() && setText.charAt(i) != '{') ;
+                    } else {
+                        return setCreated;
                     }
-                    subText = new StringBuilder();
-                    i+=2;
+                }
+                subsetText = new StringBuilder();
+                subsetEnded = false;
+                if (depth == 3) {
+                    int p=4;
                 }
             }
-
         }
         return setCreated;
     }
 
-    public static void main(String[] args) {
-        SetReader<Integer> sr = new SetReader<>(Integer.class);
-        try {
-            MySet<Integer> setCreated = sr.readFromFile("Sets/set2.txt");
-            System.out.println("wah");
-        } catch (ClassNotFoundException | IOException | MySetException e) {
-            System.out.println(e.toString());
-        }
-    }
+//    public static void main(String[] args) {
+//        SetReader<Integer> sr = new SetReader<>(Integer.class);
+//        try {
+//            MySet<Integer> setCreated = sr.readFromFile("Sets/set3.txt");
+//            System.out.println("wah");
+//        } catch (ClassNotFoundException | IOException | MySetException e) {
+//            System.out.println(e.toString());
+//        }
+//    }
 
 }

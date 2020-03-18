@@ -96,7 +96,7 @@ public interface MySet<T extends Comparable<T>> extends Iterable<T>, Comparable<
   List<T> toList();
 
   //TODO adding my own
-  void writeToFile(String filePath)  throws IOException;
+  void writeToFile(String filePath)  throws IOException, MySetException;
   @Override
   int compareTo(MySet<T> aSet);
   MySet<MySet<T>> powerSet() throws MySetException;

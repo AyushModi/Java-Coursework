@@ -25,11 +25,11 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
         return "{" +  this.toList().stream().map(stringFunction).collect(Collectors.joining(", ")) + "}";
     }
     private String cleanString(String str) {
-        return ("\"" + str.replace("\\","\\\\")
-                          .replace("\"","\\\"")
-                          .replace("{","\\{")
-                          .replace("}","\\}")
-                     + "\"");
+        return (str.replace("\\","\\\\")
+                   .replace("\"","\\\"")
+                   .replace("{","\\{")
+                   .replace("}","\\}")
+                   .replace(",","\\,"));
     }
     @Override
     public boolean equals(MySet<T> aSet)
@@ -144,11 +144,17 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
         }
     }
 
-    public void writeToFile(String filePath) throws IOException {
-
-        FileOutputStream fileOutput = new FileOutputStream(filePath);
-        ObjectOutputStream objectOutput = new ObjectOutputStream(fileOutput);
-        objectOutput.writeObject(this);
-        objectOutput.close();
+    public void writeToFile(String filePath) throws IOException, MySetException {
+        SetWriter sw = new SetWriter(filePath, this);
+        try {
+            sw.writeToFile();
+        } catch (ClassNotFoundException e) {
+            System.out.println("Error occurred while writing set\n" + e.toString());
+        }
+    }
+    public void writeToFile(String filePath, Class<T> className) throws IOException, MySetException, ClassNotFoundException {
+        SetWriter sw = new SetWriter(filePath, this);
+        sw.setClassName(className);
+        sw.writeToFile();
     }
 }
