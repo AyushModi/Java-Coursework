@@ -44,12 +44,11 @@ public class ViewPatientServlet extends HttpServlet
                 response.sendRedirect("/patientList.html");
             }
 
-        } catch (FileNotFoundException e) {
-            System.out.println("File not found\n" + e.toString());
-            response.setStatus(500);
         } catch (Exception e) {
-            System.out.println("Problem while loading file1");
-            response.setStatus(500);
+            try {
+                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                        e.toString());
+            } catch (Exception f) {}
         }
 
     }

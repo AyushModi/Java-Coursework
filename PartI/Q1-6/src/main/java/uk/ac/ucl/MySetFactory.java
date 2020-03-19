@@ -79,8 +79,7 @@ public class MySetFactory
     }
 
     public <T extends Comparable<T>> MySet<T> readSet(String filePath, Class clzz) throws IOException, ClassNotFoundException, MySetException {
-        @SuppressWarnings("unchecked")
-        SetReader<T> sr = new SetReader(clzz);
+        SetReader<T> sr = new SetReader<>(clzz);
         return sr.readFromFile(filePath);
     }
 }

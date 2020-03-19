@@ -3,6 +3,7 @@ package uk.ac.ucl.model;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 
 // This class gives access to the model to any other class that needs it.
 // Calling the static method getModel (i.e., ModelFactory.getModel()) returns
@@ -14,7 +15,7 @@ public class ModelFactory
 {
   private static Model model;
 
-  public static Model getModel() throws Exception
+  public static Model getModel() throws IOException
   {
     if (model == null)
     {
@@ -23,5 +24,10 @@ public class ModelFactory
       model.readFile(new File("./data/patients.csv"));
     }
     return model;
+  }
+  public static void readStream(InputStream stream) throws IOException {
+    if (model == null)
+      model = new Model();
+    model.readFile(stream);
   }
 }

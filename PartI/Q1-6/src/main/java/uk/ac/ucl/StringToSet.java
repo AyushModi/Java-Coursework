@@ -77,7 +77,6 @@ public class StringToSet<T extends Comparable<T>> {
             throw new MySetException("Invalid set read");
     }
 
-    @SuppressWarnings("Duplicates")
     private void runCurrentCharChecks() {
         if (currentChar == '{')
             curly++;
@@ -87,7 +86,7 @@ public class StringToSet<T extends Comparable<T>> {
             subsetText.append(setText.charAt(i++));
     }
 
-    @SuppressWarnings({"Duplicates", "unchecked"})
+    @SuppressWarnings("unchecked")
     private T parseToParam(String setText) {
         if (chosenClass.isAssignableFrom(String.class)) {
             return (T) setText;

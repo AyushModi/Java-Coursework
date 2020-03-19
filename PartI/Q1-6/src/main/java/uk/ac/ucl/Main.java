@@ -47,7 +47,7 @@ public class Main
       set1.add(1);
       set1.add(2);
       set1.add(3);
-      set1.powerSet().powerSet().writeToFile("Sets/set4.txt");
+      set1.powerSet().powerSet().writeToFile("set41.txt");
       set2 = factory.getMySet();
       set2.add(2);
       set2.add(3);
@@ -125,7 +125,7 @@ public class Main
 //    factory.setClassName("ArrayMySet");
     factory.setClassName("LinkedListMySet");
 //    factory.setClassName("MapMySet");
-//    checkIntSets();
+    checkIntSets();
 //    checkStringSets();
     try {
     MySet<String> setKaboom = factory.readSet("Sets/set5.txt", String.class);

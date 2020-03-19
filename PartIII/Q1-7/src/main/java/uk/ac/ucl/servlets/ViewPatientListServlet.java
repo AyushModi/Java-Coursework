@@ -40,12 +40,12 @@ public class ViewPatientListServlet extends HttpServlet
       ServletContext context = getServletContext();
       RequestDispatcher dispatch = context.getRequestDispatcher("/patientList.jsp");
       dispatch.forward(request, response);
-    } catch (FileNotFoundException e) {
-      System.out.println("File not found\n" + e.toString());
-      response.setStatus(500);
     } catch (Exception e) {
-      System.out.println("Problem while loading file");
-      response.setStatus(500);
+      try {
+        response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                e.toString());
+      } catch (Exception f) {}
     }
   }
+
 }

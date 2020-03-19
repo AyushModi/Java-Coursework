@@ -31,11 +31,10 @@ public class SearchServlet extends HttpServlet
       List<String> columnNames = model.getColumns();
       SearchRequestHolder srh = new SearchRequestHolder();
       for (var colName : columnNames) {
-        if (request.getParameter(colName) == null) continue;
-        else if (request.getParameter(colName).equals("(empty)")) {
-          srh.addItem(colName,"",true);
-        } else if (!request.getParameter(colName).equals("")) {
-          String matchWholeName = "matchWhole"+colName;
+        if (request.getParameter(colName) != null && request.getParameter(colName).equals("(empty)")) {
+          srh.addItem(colName, "", true);
+        } else if (request.getParameter(colName) != null && !request.getParameter(colName).equals("")) {
+          String matchWholeName = "matchWhole" + colName;
           srh.addItem(colName, request.getParameter(colName),
                   request.getParameter(matchWholeName) != null && request.getParameter(matchWholeName).equals("on"));
 
@@ -49,8 +48,10 @@ public class SearchServlet extends HttpServlet
       RequestDispatcher dispatch = context.getRequestDispatcher("/patientList.jsp");
       dispatch.forward(request, response);
     } catch (Exception e) {
-      System.out.println("Problem loading model");
-      response.setStatus(500);
+      try {
+        response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
+                e.toString());
+      } catch (Exception f) {}
     }
   }
 }
