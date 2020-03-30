@@ -9,6 +9,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Vector;
@@ -21,7 +22,6 @@ public class PatientController {
     private SwingWorker<Void, Void> fileLoader;
 
     public PatientController(Model model, PatientView view) {
-        System.out.println("Controller load thread: " + Thread.currentThread().getName());
         this.view = view;
         this.model = model;
         addEventListeners();
@@ -243,15 +243,14 @@ public class PatientController {
                 model.loadFile(fileName);
                 setTable();
                 view.setJSONAccess(true);
+                view.setTitle("PatientView: " + fileName.getName());
             } catch (FileNotFoundException e) {
                 JOptionPane.showMessageDialog(null, "The file could not be found\nFile path: " + fileName.getAbsolutePath());
             } catch (NullPointerException e) {
                 System.out.println("Null pointer: due to switching files during file load");
-            }
-            catch (Exception e) {
-                System.out.println("Caught Error\n" + e.toString());
-                JOptionPane.showMessageDialog(null, "Error occurred while opening file");
-
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Error occurred while opening file\n" + e.toString());
+                view.setTitle("PatientView");
             }
             return null;
         }
@@ -267,7 +266,6 @@ public class PatientController {
         @Override
         protected void done() {
             super.done();
-            view.setTitle("PatientView: " + fileName.getName());
             view.getTable().setVisible(true);
             view.setCheckboxVisibility(true);
             view.enableSearchButton();

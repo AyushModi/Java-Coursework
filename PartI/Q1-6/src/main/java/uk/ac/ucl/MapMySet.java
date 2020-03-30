@@ -3,6 +3,10 @@ package uk.ac.ucl;
 import java.util.HashMap;
 import java.util.Iterator;
 
+/**
+ *  A set implementation using a HashMap to store the set contents.
+ */
+
 public class MapMySet<T extends Comparable<T>> extends AbstractMySet<T>
 {
     private HashMap<T,T> contents;
@@ -36,7 +40,6 @@ public class MapMySet<T extends Comparable<T>> extends AbstractMySet<T>
     public boolean isEmpty() { return contents.isEmpty(); }
     public void remove(T setItem) { contents.remove(setItem); }
     public int size() { return contents.size(); }
-    //TODO keySet() returns a set
     public Iterator<T> iterator() {return contents.values().iterator(); }
 
 }

@@ -13,9 +13,7 @@ public class PatientView  extends JFrame {
     private JTextField searchbox;
     private JCheckBox matchWholeStringBox;
     private JButton searchBtn;
-    private JLabel load;
     public PatientView() {
-        System.out.println("GUI load thread: " + Thread.currentThread().getName());
         setTableProperties();
         setFrameProperties();
         this.setVisible(true);

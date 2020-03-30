@@ -3,6 +3,9 @@ package uk.ac.ucl;
 import java.io.*;
 import java.util.Optional;
 
+/**
+ * This class is responsible for writing the string representation of a set to a file in a manner that it can be read both by a human and the SetReader class
+ */
 public class SetWriter {
     private String filePath;
     private MySet<?> set;
@@ -71,20 +74,4 @@ public class SetWriter {
         }
         return Optional.empty();
     }
-
-//    public static void main(String[] args) {
-//        MySetFactory factory = MySetFactory.getInstance();
-//        factory.setClassName("LinkedListMySet");
-//        try {
-//            MySet<Integer> set = factory.getMySet();
-//            set.add(1);
-//            set.add(2);
-//            set.add(3);
-//            set.add(4);
-//            SetWriter sw = new SetWriter("Sets/set3.txt", set.powerSet());
-//            sw.writeToFile();
-//        } catch (Exception e) {
-//            System.out.println(e.toString());
-//        }
-//    }
 }

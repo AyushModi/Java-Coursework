@@ -8,7 +8,7 @@ public class DataLoader {
 
     public DataLoader() { dataFrame = new DataFrameLinkedHash(); }
 
-    public void readData(File fileName) throws Exception {
+    public void readData(File fileName) throws IOException {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8))) {
             String rowLine;
             String[] colHeaders = null;
@@ -20,7 +20,7 @@ public class DataLoader {
                         dataFrame.addColumn(colName);
                 } else {
                     if (values.length != colHeaders.length) {
-                        throw new Exception("Number of column in a row don't match total columns");
+                        throw new IOException("Either file in incorrect format or number of column in a row don't match total columns");
                     }
                     int i = 0;
                     for (var colName : colHeaders)

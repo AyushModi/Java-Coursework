@@ -95,10 +95,30 @@ public interface MySet<T extends Comparable<T>> extends Iterable<T>, Comparable<
    */
   List<T> toList();
 
-  //TODO adding my own
+  /**
+   * Write the set to a file (the class of the set is inferred if possible)
+   * @param filePath The path the string needs to be saved in.
+   * @throws IOException If file path could not be resolved
+   * @throws MySetException If attempting to write an empty set when SetWriter.className not specified
+   */
   void writeToFile(String filePath)  throws IOException, MySetException;
-  @Override
-  int compareTo(MySet<T> aSet);
+
+  /**
+   * Write the set to a file with the given class
+   * @param filePath The path the string needs to be saved in.
+   * @param className The class that the set should be written in
+   * @throws IOException If file path could not be resolved
+   * @throws MySetException If attempting to write an empty set when SetWriter.className not specified
+   * @throws ClassNotFoundException If className does not refer to a valid class
+   */
+  void writeToFile(String filePath, Class<T> className)  throws IOException, MySetException, ClassNotFoundException;
+
+  /**
+   * A function that returns the powerSet of a set.
+   * This function be used to create powerSets of nested sets
+   * @return A set of set of a generic type, this type can itself be a nested set of a type implementing Comparable
+   * @throws MySetException If max set size limit reached
+   */
   MySet<MySet<T>> powerSet() throws MySetException;
 
 }

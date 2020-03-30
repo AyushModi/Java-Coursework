@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/PartI/Q1-6/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PartI/Q1-6/Sets" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/PartII/Q1-9/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PartIII/Q1-7/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/PartII/Q1-9/COMP0004Data" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/PartIII/Q1-7/data" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/PartI/Q1-6/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/PartI/Q1-6/.settings" />
+      <excludeFolder url="file://$MODULE_DIR$/PartII/Q1-9/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/PartII/Q1-9/out" />
+      <excludeFolder url="file://$MODULE_DIR$/PartIII/Q1-7/.settings" />
+      <excludeFolder url="file://$MODULE_DIR$/PartIII/Q1-7/target" />
+      <excludeFolder url="file://$MODULE_DIR$/PartIII/Q1-7/tomcat.8080" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -2,9 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95a89a4b-2dca-4626-97f1-f115b1db8373" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySetFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySetFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/AbstractMySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/AbstractMySet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/ArrayMySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/ArrayMySet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/LinkedListMySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/LinkedListMySet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MapMySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MapMySet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/StringToSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uk/ac/ucl/StringToSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PartII/Q1-9/media/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PartII/Q1-9/src/Controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PartII/Q1-9/src/Controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PartII/Q1-9/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PartII/Q1-9/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PartII/Q1-9/src/Model/DataLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PartII/Q1-9/src/Model/DataLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PartII/Q1-9/src/Model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PartII/Q1-9/src/Model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PartII/Q1-9/src/View/PatientView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../PartII/Q1-9/src/View/PatientView.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,53 +36,55 @@
     <session id="-627698778">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.43" value="1" />
           <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="24" />
+          <entry key="java" value="35" />
           <entry key="snippet" value="1" />
           <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="24" />
+          <entry key="JAVA" value="35" />
           <entry key="PLAIN_TEXT" value="10" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8522" />
+          <entry key="java" value="10503" />
           <entry key="txt" value="98" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8522" />
+          <entry key="JAVA" value="10503" />
           <entry key="PLAIN_TEXT" value="98" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6015625">
+    <splitter split-orientation="vertical" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetReader.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="550">
-                  <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+                <state relative-caret-position="154">
+                  <caret line="7" column="121" selection-start-line="7" selection-start-column="121" selection-end-line="7" selection-end-column="121" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#232#233#0" expanded="true" />
-                    <element signature="e#278#279#0" expanded="true" />
+                    <element signature="e#259#260#0" expanded="true" />
+                    <element signature="e#305#306#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -77,8 +93,20 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetWriter.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1188">
-                  <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+                <state relative-caret-position="1518">
+                  <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/ArrayMySet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="308">
+                  <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -87,13 +115,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/ArrayMySet.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySetFactory.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="374">
-                  <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="330">
+                  <caret line="81" selection-start-line="81" selection-end-line="81" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySetException.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="132">
+                  <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
                 </state>
               </provider>
             </entry>
@@ -101,33 +135,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/LinkedListMySet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1298">
-                  <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySetFactory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="618">
-                  <caret line="81" selection-start-line="81" selection-end-line="81" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetWriter.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="499">
-                  <caret line="76" column="11" selection-start-line="76" selection-start-column="11" selection-end-line="76" selection-end-column="11" />
+                <state relative-caret-position="137">
+                  <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -136,13 +145,19 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/AbstractMySet.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1012">
-                  <caret line="52" selection-start-line="52" selection-end-line="52" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="341">
+                  <caret line="111" column="80" selection-start-line="111" selection-start-column="80" selection-end-line="111" selection-end-column="80" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MapMySet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="44">
+                  <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
                 </state>
               </provider>
             </entry>
@@ -150,16 +165,32 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/StringToSet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="449">
-                  <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
+                <state relative-caret-position="22">
+                  <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/Main.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="249">
+                  <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/AbstractMySet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3317">
+                  <caret line="157" column="24" selection-start-line="157" selection-start-column="24" selection-end-line="157" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#919#920#0" expanded="true" />
-                    <element signature="e#972#973#0" expanded="true" />
-                    <element signature="e#942#943#0" expanded="true" />
-                    <element signature="e#980#981#0" expanded="true" />
-                    <element signature="e#1799#1829#0" expanded="true" />
-                    <element signature="e#2777#2807#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -189,20 +220,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/LinkedListMySet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MapMySet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/ArrayMySet.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/AbstractClassReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/AbstractSetReader.java" />
         <option value="$PROJECT_DIR$/Sets/set2.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/AbstractMySet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetWriter.java" />
         <option value="$PROJECT_DIR$/Sets/set4.txt" />
         <option value="$PROJECT_DIR$/Sets/set1.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/StringToSet.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySetFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/ArrayMySet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/LinkedListMySet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MapMySet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/AbstractMySet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/StringToSet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetWriter.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetReader.java" />
       </list>
     </option>
@@ -235,6 +266,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -278,13 +310,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584535464171" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585608515723" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -367,17 +398,18 @@
       <updated>1584437873733</updated>
       <workItem from="1584437881023" duration="39300000" />
       <workItem from="1584526550560" duration="8949000" />
+      <workItem from="1585523896517" duration="630000" />
+      <workItem from="1585604361681" duration="5029000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48249000" />
+    <option name="totallyTimeSpent" value="53908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1130064" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11886994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -445,22 +477,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/Main.java</url>
-          <line>131</line>
-          <properties />
-          <option name="timeStamp" value="114" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/Main.java</url>
-          <line>81</line>
-          <properties />
-          <option name="timeStamp" value="115" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="depth" language="JAVA" />
@@ -468,11 +484,17 @@
         <watch expression="setText.length()" language="JAVA" />
         <watch expression="subsetText.charAt(i+1)" language="JAVA" />
         <watch expression="getClass().getTypeParameters()[0].getBounds()" language="JAVA" />
+        <watch expression="aSet.toList()" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>aSet.toList()</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>getClass().getTypeParameters()[0].getBounds()</expression-string>
         <language-id>JAVA</language-id>
@@ -518,21 +540,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>c</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MapMySet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/jshell/jshell_console.snippet">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -551,47 +561,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="98" column="71" selection-start-line="98" selection-start-column="71" selection-end-line="98" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-13.0.2/lib/src.zip!/java.base/java/util/Iterator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="130" selection-start-line="130" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/ArrayMySet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/LinkedListMySet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1298">
-          <caret line="62" column="35" selection-start-line="62" selection-start-column="35" selection-end-line="62" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/AbstractMySet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="52" selection-start-line="52" selection-end-line="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -624,56 +597,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/StringToSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="87" lean-forward="true" selection-start-line="87" selection-end-line="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#972#973#0" expanded="true" />
-            <element signature="e#942#943#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1799#1829#0" expanded="true" />
-            <element signature="e#2777#2807#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
-          <folding>
-            <element signature="e#3904#3905#0" expanded="true" />
-            <element signature="e#3929#3930#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="22">
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetWriter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1188">
-          <caret line="61" column="30" selection-start-line="61" selection-start-column="30" selection-end-line="61" selection-end-column="30" />
+        <state relative-caret-position="1518">
+          <caret line="75" column="5" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="121" selection-start-line="7" selection-start-column="121" selection-end-line="7" selection-end-column="121" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#259#260#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySetFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="618">
+        <state relative-caret-position="330">
           <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/SetReader.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySetException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="132">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="111" column="80" selection-start-line="111" selection-start-column="80" selection-end-line="111" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/MapMySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="6" column="67" selection-start-line="6" selection-start-column="67" selection-end-line="6" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="53" column="16" selection-start-line="53" selection-start-column="16" selection-end-line="53" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/LinkedListMySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#232#233#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/ArrayMySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/ac/ucl/AbstractMySet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3317">
+          <caret line="157" column="24" selection-start-line="157" selection-start-column="24" selection-end-line="157" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

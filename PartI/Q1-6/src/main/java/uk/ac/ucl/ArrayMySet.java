@@ -5,9 +5,6 @@ import java.util.ArrayList;
 
 /**
  *  A set implementation using an ArrayList to store the set contents.
- * <br />
- *  Objects representing values stored in a set are compared using the compareTo method, so
- *  the object classes must correctly implement compareTo.
  */
 public class ArrayMySet<T extends Comparable<T>> extends AbstractMySet<T>
 {

@@ -1,7 +1,9 @@
 package uk.ac.ucl;
 
-import java.util.function.Function;
-import java.util.function.Supplier;
+/**
+ * This class is responsible for converting a string version of a set to a set data structure
+ * It can be convert string to nested sets
+ */
 
 public class StringToSet<T extends Comparable<T>> {
     private static Class<?> chosenClass;

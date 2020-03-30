@@ -9,7 +9,7 @@ public class Model {
     private Dataframe dataFrame;
     private ArrayList<Integer> filterList;
 
-    public void loadFile(File filePath) throws Exception {
+    public void loadFile(File filePath) throws IOException {
         DataLoader dl = new DataLoader();
         dl.readData(filePath);
         dataFrame = dl.getDataFrame();

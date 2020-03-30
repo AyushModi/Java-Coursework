@@ -24,6 +24,12 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
         }
         return "{" +  this.toList().stream().map(stringFunction).collect(Collectors.joining(", ")) + "}";
     }
+
+    /**
+     * This function will escape illegal characters that can create confusion if this set was to be read from a file
+     * @param str The string to be escaped
+     * @return The escaped string
+     */
     private String cleanString(String str) {
         return (str.replace("\\","\\\\")
                    .replace("\"","\\\"")
@@ -38,7 +44,6 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
         for (Iterator<T> i = aSet.iterator(); i.hasNext();) {
             if (!this.contains(i.next())) return false;
         }
-        // TODO write a working method body.
         return true;
     }
 
@@ -51,10 +56,7 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
     public List<T> toList()
     {
         ArrayList<T> returnList = new ArrayList<>();
-//        returnList.add((MySet<T>) this);
-//        returnList.add();
         this.iterator().forEachRemaining(returnList::add);
-        // TODO write the code to return a List of list of the set contents.
         return returnList;
     }
 
@@ -91,15 +93,23 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
                 result.add(nextVal);
             }
         }
-        // TODONE write the statements needed to find the difference.
         return result;
     }
 
+    /**
+     * Standard compareTo function specifying that sets will be compared on the basis of their sizes
+     * @param aSet The specified set to compare with
+     * @return an int being -1 if smaller, 1 if bigger, 0 if equal length.
+     */
     @Override
     public int compareTo(MySet<T> aSet) {
-        Collections.sort(aSet.toList());
-        Collections.sort(this.toList());
-        return this.toString().compareTo(aSet.toString());
+        if (this.size() < aSet.size())
+            return -1;
+        else if (this.size() > aSet.size())
+            return 1;
+        else {
+            return 0;
+        }
     }
 
     public MySet<MySet<T>> powerSet() throws MySetException {
@@ -108,11 +118,6 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
 
         for (T item : this) {
             MySet<MySet<T>> temp = MySetFactory.getInstance().getMySet();
-
-            // for each sEt in result
-                // add item to sEt, add sEt to temp
-            // add temp to result
-//            result.iterator().forEachRemaining(r);
             for (MySet<T> set : result) {
                 MySet<T> setClone = MySetFactory.getInstance().getMySet();
                 addAll(set, setClone);
@@ -120,7 +125,6 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
                 temp.add(setClone);
             }
             result = result.union(temp);
-//            result.add()
         }
         return result;
     }
@@ -131,7 +135,6 @@ public abstract class AbstractMySet<T extends Comparable<T>> implements MySet<T>
     {
         if (maximumSize < 1 || maximumSize > MAX_SIZE)
             throw new MySetException("Error: exceeds MAX_SIZE of MySet");
-        // TODONE throw an exception if the set exceeds its maximum size.
     }
 
     // A helper method that might be useful.

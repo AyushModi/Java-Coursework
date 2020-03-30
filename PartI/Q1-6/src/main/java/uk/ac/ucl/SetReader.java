@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * This class is responsible for reading data from a file and creating and returning a set data structure from that file.
+ */
+
 public class SetReader<T extends Comparable<T>> {
     private Class<?> chosenClass;
 

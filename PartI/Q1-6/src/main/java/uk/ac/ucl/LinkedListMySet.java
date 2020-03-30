@@ -3,6 +3,10 @@ package uk.ac.ucl;
 import java.io.Serializable;
 import java.util.Iterator;
 
+/**
+ *  A set implementation using a LinkedList to store the set contents.
+ */
+
 public class LinkedListMySet<T extends Comparable<T>> extends AbstractMySet<T>
 {
     private int maximumSize;

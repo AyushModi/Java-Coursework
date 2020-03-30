@@ -44,14 +44,15 @@ public class Main
     try
     {
       set1 = factory.getMySet();
-      set1.add(1);
-      set1.add(2);
       set1.add(3);
+      set1.add(2);
+      set1.add(1);
       set1.powerSet().powerSet().writeToFile("set41.txt");
       set2 = factory.getMySet();
-      set2.add(2);
-      set2.add(3);
       set2.add(4);
+      set2.add(3);
+      set2.add(2);
+      set1.compareTo(set2);
       checkOperations(set1, set2);
       System.out.println("\nRemoving 3 from set1, 4 from set2");
       set1.remove(3);
@@ -78,7 +79,6 @@ public class Main
       set1.add("Two\", Fake Three");
       set1.add("Three");
       set1.powerSet().powerSet().writeToFile("Sets/set5.txt");
-
       set2 = factory.getMySet();
       set2.add("Two");
       set2.add("Three");
