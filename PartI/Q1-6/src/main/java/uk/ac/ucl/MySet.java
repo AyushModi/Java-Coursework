@@ -13,7 +13,6 @@ import java.util.List;
  *  for each loop.
  */
 
-// TODO ask if i can change this
 public interface MySet<T extends Comparable<T>> extends Iterable<T>, Comparable<MySet<T>>
 {
   /**

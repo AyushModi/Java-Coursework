@@ -3,11 +3,19 @@ package Model;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
+/**
+ * This class is responsible for reading a csv file into a dataframe
+ */
 public class DataLoader {
     private Dataframe dataFrame;
 
     public DataLoader() { dataFrame = new DataFrameLinkedHash(); }
 
+    /**
+     * Reads a csv file
+     * @param fileName The location of the csv file to read from
+     * @throws IOException When file not found or the csv file is in incorrect format.
+     */
     public void readData(File fileName) throws IOException {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), StandardCharsets.UTF_8))) {
             String rowLine;
@@ -30,5 +38,9 @@ public class DataLoader {
         }
     }
 
+    /**
+     * Returns the dataframe read
+     * @return The dataframe
+     */
     public Dataframe getDataFrame() { return dataFrame; }
 }

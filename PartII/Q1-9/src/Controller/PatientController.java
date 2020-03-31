@@ -14,6 +14,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Vector;
 
+/**
+ * This class is the link between the model (the data side) and the view (the graphics side)
+ */
 public class PatientController {
     private PatientView view;
     private Model model;
@@ -65,6 +68,12 @@ public class PatientController {
         });
     }
 
+    /**
+     * This method returns a SwingWorker that is responsible
+     * for initiating the writing of the dataframe to a file in a separate thread
+     * @param filePath The file path
+     * @return The SwingWorker that should be executed
+     */
     public SwingWorker<Void, Void> writeToJSON(File filePath) {
         return new SwingWorker<>() {
             @Override
@@ -84,6 +93,12 @@ public class PatientController {
         }
         return chosenColumns;
     }
+
+    /**
+     * This method returns a SwingWorker that is responsible
+     * for initiating the searching of the dataframe for a specific value in a separate thread
+     * @return The SwingWorker that should be executed
+     */
     public SwingWorker<Void, Void> search() {
         return new SwingWorker<Void, Void>() {
             @Override
@@ -139,8 +154,9 @@ public class PatientController {
         }
     }
 
-    // below are two inner classes
-
+    /**
+     * This class is an extended version of the DefaultTableModel
+     */
     private class MyTableModel extends DefaultTableModel {
 
         private void setCheckboxesAccess(Boolean enabled) {
@@ -148,6 +164,12 @@ public class PatientController {
                 checkbox.setEnabled(enabled);
         }
 
+        /**
+         * This method returns a SwingWorker that is responsible
+         * for initiating the removal of a column from the dataframe in a separate thread
+         * @param column The checkbox specifying the column
+         * @return A SwingWorker that should be executed
+         */
         public SwingWorker<Void, Void> removeColumn(JCheckBox column) {
             return new SwingWorker<>() {
                 private String title;
@@ -175,6 +197,7 @@ public class PatientController {
                 }
             };
         }
+
         @SuppressWarnings("unchecked")
         public SwingWorker<Void, Void> addColumnAtCorrectIndex(JCheckBox column) {
             return new SwingWorker<>() {

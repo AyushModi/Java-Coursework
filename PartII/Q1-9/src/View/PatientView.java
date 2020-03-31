@@ -13,11 +13,15 @@ public class PatientView  extends JFrame {
     private JTextField searchbox;
     private JCheckBox matchWholeStringBox;
     private JButton searchBtn;
+
+    /**
+     * The following chain of functions creates the view when the class is initialised
+     */
+
     public PatientView() {
         setTableProperties();
         setFrameProperties();
         this.setVisible(true);
-
     }
     private void setTableProperties() {
         table = new JTable();
@@ -80,6 +84,11 @@ public class PatientView  extends JFrame {
         checkBoxPanel.setPreferredSize(new Dimension(180,500));
         return new JScrollPane(checkBoxPanel);
     }
+
+    /**
+     * The following methods are there to allow the controller to modify the items in the view and access their attributes
+     */
+
     public void loadFileBtnEvent(ActionListener e) { loadFileBtn.addActionListener(e); }
 
     public void addSearchBtnEvent(ActionListener e) { searchBtn.addActionListener(e); }
